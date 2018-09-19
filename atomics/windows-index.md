@@ -9,6 +9,7 @@
 - T1088 Bypass User Account Control [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - [T1191 CMSTP](./T1191/T1191.md)
   - Atomic Test #1: CMSTP Executing Remote Scriptlet [windows]
+  - Atomic Test #2: CMSTP Executing UAC Bypass [windows]
 - T1116 Code Signing [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - T1109 Component Firmware [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - [T1122 Component Object Model Hijacking](./T1122/T1122.md)
@@ -20,6 +21,7 @@
 - T1073 DLL Side-Loading [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - [T1140 Deobfuscate/Decode Files or Information](./T1140/T1140.md)
   - Atomic Test #1: Deobfuscate/Decode Files Or Information [windows]
+  - Atomic Test #2: Certutil Rename and Decode [windows]
 - [T1089 Disabling Security Tools](./T1089/T1089.md)
 - T1211 Exploitation for Defense Evasion [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - T1181 Extra Window Memory Injection [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
@@ -52,14 +54,18 @@
 - [T1118 InstallUtil](./T1118/T1118.md)
   - Atomic Test #1: InstallUtil uninstall method call [windows]
 - T1036 Masquerading [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
-- T1112 Modify Registry [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
+- [T1112 Modify Registry](./T1112/T1112.md)
+  - Atomic Test #1: Modify Registry of Current User Profile - cmd [windows]
+  - Atomic Test #2: Modify Registry of Local Machine - cmd [windows]
+  - Atomic Test #3: Modify Registry of Another User Profile [windows]
 - [T1170 Mshta](./T1170/T1170.md)
   - Atomic Test #1: Mshta executes JavaScript Scheme Fetch Remote Payload With GetObject [windows]
 - [T1096 NTFS File Attributes](./T1096/T1096.md)
   - Atomic Test #1: Alternate Data Streams (ADS) [windows]
 - [T1126 Network Share Connection Removal](./T1126/T1126.md)
-  - Atomic Test #1: Remove Network Share [windows]
-  - Atomic Test #2: Remove Network Share PowerShell [windows]
+  - Atomic Test #1: Add Network Share [windows]
+  - Atomic Test #2: Remove Network Share [windows]
+  - Atomic Test #3: Remove Network Share PowerShell [windows]
 - T1027 Obfuscated Files or Information [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - T1186 Process Doppelgänging [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - T1093 Process Hollowing [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
@@ -75,6 +81,7 @@
   - Atomic Test #2: Regsvr32 remote COM scriptlet execution [windows]
   - Atomic Test #3: Regsvr32 local DLL execution [windows]
 - [T1014 Rootkit](./T1014/T1014.md)
+  - Atomic Test #4: Windows Signed Driver Rootkit Test [windows]
 - [T1085 Rundll32](./T1085/T1085.md)
   - Atomic Test #1: Rundll32 execute JavaScript Remote Payload With GetObject [windows]
 - T1198 SIP and Trust Provider Hijacking [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
@@ -85,6 +92,8 @@
 - [T1099 Timestomp](./T1099/T1099.md)
 - [T1127 Trusted Developer Utilities](./T1127/T1127.md)
   - Atomic Test #1: MSBuild Bypass Using Inline Tasks [windows]
+  - Atomic Test #2: MSXSL Bypass using local files [windows]
+  - Atomic Test #3: MSXSL Bypass using remote files [windows]
 - T1078 Valid Accounts [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - T1102 Web Service [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 
@@ -178,7 +187,8 @@
 - T1177 LSASS Driver [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - [T1037 Logon Scripts](./T1037/T1037.md)
   - Atomic Test #1: Logon Scripts [windows]
-- T1031 Modify Existing Service [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
+- [T1031 Modify Existing Service](./T1031/T1031.md)
+  - Atomic Test #1: Modify Fax service to run PowerShell [windows]
 - [T1128 Netsh Helper DLL](./T1128/T1128.md)
   - Atomic Test #1: Netsh Helper DLL Registration [windows]
 - [T1050 New Service](./T1050/T1050.md)
@@ -230,6 +240,8 @@
 - [T1201 Password Policy Discovery](./T1201/T1201.md)
 - T1120 Peripheral Device Discovery [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - [T1069 Permission Groups Discovery](./T1069/T1069.md)
+  - Atomic Test #2: Permission Groups Discovery Windows [windows]
+  - Atomic Test #3: Permission Groups Discovery PowerShell [windows]
 - [T1057 Process Discovery](./T1057/T1057.md)
 - [T1012 Query Registry](./T1012/T1012.md)
   - Atomic Test #1: Query Registry [windows]
@@ -354,6 +366,7 @@
 # execution
 - [T1191 CMSTP](./T1191/T1191.md)
   - Atomic Test #1: CMSTP Executing Remote Scriptlet [windows]
+  - Atomic Test #2: CMSTP Executing UAC Bypass [windows]
 - [T1059 Command-Line Interface](./T1059/T1059.md)
 - T1196 Control Panel Items [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - [T1173 Dynamic Data Exchange](./T1173/T1173.md)
@@ -398,6 +411,8 @@
 - T1072 Third-party Software [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - [T1127 Trusted Developer Utilities](./T1127/T1127.md)
   - Atomic Test #1: MSBuild Bypass Using Inline Tasks [windows]
+  - Atomic Test #2: MSXSL Bypass using local files [windows]
+  - Atomic Test #3: MSXSL Bypass using remote files [windows]
 - T1204 User Execution [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - [T1047 Windows Management Instrumentation](./T1047/T1047.md)
   - Atomic Test #1: WMI Reconnaissance Users [windows]
@@ -440,7 +455,7 @@
 - T1200 Hardware Additions [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - T1091 Replication Through Removable Media [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - [T1193 Spearphishing Attachment](./T1193/T1193.md)
-  - Atomic Test #1: Download Spearphishing Attachment [windows]
+  - Atomic Test #1: Download Phishing Attachment - VBScript [windows]
 - T1192 Spearphishing Link [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - T1194 Spearphishing via Service [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
 - T1195 Supply Chain Compromise [CONTRIBUTE A TEST](https://atomicredteam.io/contributing)
