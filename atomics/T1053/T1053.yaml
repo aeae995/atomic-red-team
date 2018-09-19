@@ -11,10 +11,16 @@ atomic_tests:
   supported_platforms:
     - windows
 
+input_arguments:
+    time:
+      description: What time 24 Hour
+      type: String
+      default: 13:20
+      
   executor:
     name: command_prompt
     command: |
-      at 13:20 /interactive cmd
+      at #{time} /interactive cmd
 - name: Scheduled task Local
   description: |
 
