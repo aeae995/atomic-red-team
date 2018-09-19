@@ -11,7 +11,7 @@ atomic_tests:
   supported_platforms:
     - windows
 
-input_arguments:
+  input_arguments:
     time:
       description: What time 24 Hour
       type: String
