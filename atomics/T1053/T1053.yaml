@@ -19,6 +19,7 @@ atomic_tests:
 
   executor:
     name: command_prompt
+    elevation_required: false
     command: |
       at #{time} /interactive cmd
 
@@ -40,6 +41,7 @@ atomic_tests:
 
   executor:
     name: command_prompt
+    elevation_required: false
     command: |
       SCHTASKS /Create /SC ONCE /TN spawn /TR #{task_command} /ST #{time}
 
